@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %> | My Portfolio</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="/images/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <header>
+      <nav
+        style="
+          position: fixed;
+          top: 0;
+          width: 100%;
+          background: #333;
+          color: white;
+        "
+      >
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <!-- specific page content  -->
+      <%- include(content) %>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Let's Connect</p>
+        <div class="social-links">
+          <a
+            href="https://github.com/quratulainquratulain"
+            target="_blank"
+            aria-label="GitHub"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          
+        </div>
+        <p class="footer-copyright">
+          © 2024 Quratulain. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM fully loaded and parsed");
+
+        window.addEventListener("scroll", () => {
+          console.log("Scroll event detected!");
+
+          const sections = document.querySelectorAll("section");
+          const navLinks = document.querySelectorAll("nav a");
+          let currentSection = "";
+
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+
+            if (
+              window.pageYOffset >= sectionTop - 60 &&
+              window.pageYOffset < sectionTop + sectionHeight
+            ) {
+              currentSection = section.getAttribute("id");
+            }
+          });
+
+          console.log("Current Section:", currentSection);
+
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${currentSection}`) {
+              link.classList.add("active");
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

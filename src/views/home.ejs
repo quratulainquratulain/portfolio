@@ -1,0 +1,49 @@
+<!-- Header Section -->
+<section
+  id="home"
+  style="
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+  "
+>
+  <div style="width: 100%">
+    <img
+      src="images/profile-pic.jpg"
+      alt="Profile Picture"
+      class="profile-pic"
+    />
+    <h1 style="font-size: 3em; margin-bottom: 0.5em">Hello, I'm Quratulain</h1>
+    <h2 style="font-size: 1.5em; font-weight: 300">
+      Technology management Student 
+    </h2>
+    <p style="margin-top: 1em; font-size: 1.1em">
+      Welcome to my portfolio.
+    </p>
+    <a
+      href="#projects"
+      style="
+        display: inline-block;
+        margin-top: 1.5em;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #ff00e1;
+        border-radius: 5px;
+        text-decoration: none;
+      "
+      >View My Work</a
+    >
+  </div>
+</section>
+
+<!-- Include About Section -->
+<%- include('partials/about') %>
+
+<!-- Include Projects Section -->
+<%- include('partials/projects') %>
+
+<!-- Include Contact Section -->
+<%- include('partials/contact') %>

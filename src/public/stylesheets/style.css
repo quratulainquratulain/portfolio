@@ -1,0 +1,260 @@
+/* public/stylesheets/style.css */
+
+header nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+header nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #ff00e6;
+  font-weight: bold;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid #ff00fb; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: 50px; 
+}
+
+a {
+  color: #fb00ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #333;
+  color: white;
+  text-align: center;
+}
+
+#about,
+#skills,
+#projects,
+#contact {
+  background: #f4f4f4;
+  padding: 60px 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+
+.projects-title {
+  font-size: 2.5em;
+  color: #ff00ee;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #ff00ee;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+
+.project-card {
+  width: 300px;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.project-heading {
+  font-size: 1.5em;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  border-left: 4px solid #f200ff;
+  padding-left: 10px;
+}
+
+/* Project description */
+.project-card p {
+  font-size: 1em;
+  color: #666;
+  line-height: 1.5;
+}
+
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #f1f1f1;
+  font-size: 1.8em;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff00e6;
+  transform: scale(1.1);
+}
+
+
+.footer-content .footer-copyright {
+  font-size: 0.9em;
+  margin-top: 15px;
+  color: #ccc;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header nav {
+  background-color: #333;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+header nav a {
+  color: #fff;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #ff00fb;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  margin: 0; 
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p:first-child {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff00e6;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  color: #f1f1f1;
+  font-size: 1.8em;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff00fb;
+  transform: scale(1.1);
+}
+
+main section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+#loom-companion-mv3 {
+  display: none; /* Hides the Loom companion element */
+}

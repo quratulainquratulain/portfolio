@@ -1,0 +1,102 @@
+<!-- Contact Section -->
+<section
+  id="contact"
+  style="padding: 50px; background-color: #1a1a1a; color: #fff"
+>
+  <div
+    style="
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      margin-top: 165px;
+      margin-bottom: 165px;
+    "
+  >
+    <h2 style="font-size: 2em; margin-bottom: 0.5em">Contact Me</h2>
+    <p style="font-size: 1.1em">
+      Feel free to reach out if you want to collaborate on a project or just say
+      hello!
+    </p>
+    <form id="contactForm" style="margin-top: 20px">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin: 5px 0;
+          border: none;
+          border-radius: 5px;
+        "
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin: 5px 0;
+          border: none;
+          border-radius: 5px;
+        "
+        required
+      />
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        style="
+          width: 100%;
+          padding: 10px;
+          margin: 5px 0;
+          border: none;
+          border-radius: 5px;
+        "
+        required
+      ></textarea>
+      <button
+        type="submit"
+        style="
+          padding: 10px 20px;
+          color: #fff;
+          background-color: #ff00dd;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+      >
+        Send Message
+      </button>
+      <!-- Error message area -->
+      <p
+        id="errorMessage"
+        style="color: #ff4d4d; display: none; margin-top: 10px"
+      >
+        An error occurred.
+      </p>
+    </form>
+  </div>
+</section>
+
+<script>
+  // Form submit event handler
+  document.getElementById("contactForm").onsubmit = function (event) {
+    event.preventDefault(); 
+
+    
+    const name = document.querySelector("input[name='name']").value;
+    const email = document.querySelector("input[name='email']").value;
+    const message = document.querySelector("textarea[name='message']").value;
+    const errorMessage = document.getElementById("errorMessage");
+
+    // Check if all fields are filled
+    if (true) {
+      errorMessage.style.display = "block"; // Show error message
+    } else {
+      errorMessage.style.display = "none"; 
+      alert("Form submitted successfully (in a real app)!");
+    }
+  };
+</script>
